@@ -12,4 +12,10 @@ defineProps({
 
 </template>
 
-<style scoped></style>
+<style scoped>
+.task-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+</style>

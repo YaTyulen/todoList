@@ -16,10 +16,9 @@ defineProps({
     margin: 0;
     padding: 0;
     list-style-type: none;
-}
-
-.task-item {
     display: flex;
+    flex-direction: column;
     gap: 10px;
+    font-size: 20px;
 }
 </style>

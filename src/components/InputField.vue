@@ -1,28 +1,22 @@
 <script setup>
 let taskValue = '';
-defineProps({
-    value: String,
-})
-
-function addTask() {
-    console.log(taskValue);
-    if (taskValue.trim()) {
-        const newTask = {
-            id: Date.now(),
-            text: taskValue,
-            done: false
-        }
-
-        this.$emit('addTask', taskValue);
-    }
-}
-
-
 </script>
 
 <template>
-    <input v-model="taskValue" />
-    <button @click="addTofo()">Добавить</button>
+    <input v-model="taskValue" type="text" />
+    <button class="button-add" @click="$emit('click', taskValue)" title="Добавить задачу">+</button>
 </template>
 
-<style scoped></style>
+<style scoped>
+input {
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #919191
+}
+
+.button-add {
+    background-color: transparent;
+    border: none;
+}
+</style>
