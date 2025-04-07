@@ -12,7 +12,7 @@ defineEmits(['toggle-task', 'delete-task'])
     <li class="task-item" :key="task.id">
         <div class="task-name-container">
             <input type="checkbox" :checked="task.done" @change="$emit('toggle-task', task.id);">
-            <span>{{ task.text }}</span>
+            <span class="task-text">{{ task.text }}</span>
         </div>
         <button @click="$emit('delete-task', task.id);" class="task-delete-button">
             <IconBase width="12" height="12" iconColor="blue"><DeleteIcon /></IconBase>
@@ -31,6 +31,10 @@ defineEmits(['toggle-task', 'delete-task'])
 
 .task-item:hover {
    background-color: var(--backgroundButtonsActive);
+}
+
+input:checked ~ .task-text {
+    text-decoration: line-through;
 }
 
 .task-name-container {
