@@ -4,18 +4,19 @@ defineProps({
     taskList: Array,
 })
 
-defineEmits(['toggle-task', 'delete-task'])
+defineEmits(['toggle-task', 'delete-task', 'edit-task'])
 </script>
 
 <template>
-    <ul class="task-list">
-        <TaskItem 
-            v-for="task in taskList" 
-            :task="task" 
-            :key="task.id" 
-            @toggle-task="$emit('toggle-task', $event)" 
-            @delete-task="$emit('delete-task', $event)"/>
-    </ul>
+  <ul class="task-list">
+    <TaskItem 
+      v-for="task in taskList" 
+      :task="task" 
+      :key="task.id" 
+      @toggle-task="$emit('toggle-task', $event)" 
+      @delete-task="$emit('delete-task', $event)"
+      @edit-task="$emit('edit-task', $event)"/>
+  </ul>
 </template>
 
 <style scoped>

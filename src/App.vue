@@ -34,6 +34,16 @@ const deleteTask = (id) => {
     taskList.value = taskList.value.filter(item => item.id !== id)
     localStorage.setItem('taskList', JSON.stringify(taskList.value))
 }
+
+// Функция редактирования задачи
+const editTask = ({id, text}) => {
+    console.log(id, text);
+    const task = taskList.value.find(item => item.id === id)
+    if (task) {
+        task.text = text
+    }
+    localStorage.setItem('taskList', JSON.stringify(taskList.value))
+}
 </script>
 
 <template>
@@ -43,7 +53,11 @@ const deleteTask = (id) => {
             <div class="input-add-container">
                 <InputField @add-task="addTask"/>
             </div>
-            <TaskList :taskList="taskList" @toggle-task="toggleTask" @delete-task="deleteTask"/>
+            <TaskList 
+                :taskList="taskList" 
+                @toggle-task="toggleTask" 
+                @delete-task="deleteTask"
+                @edit-task="editTask"/>
         </div>
     </div>
 </template>
