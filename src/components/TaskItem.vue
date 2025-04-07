@@ -30,7 +30,7 @@ defineEmits(['toggle-task', 'delete-task'])
 }
 
 .task-item:hover {
-   background-color: #dedede;
+   background-color: var(--backgroundButtonsActive);
 }
 
 .task-name-container {
@@ -39,9 +39,9 @@ defineEmits(['toggle-task', 'delete-task'])
 }
 
 .task-delete-button {
-    background-color: #ffffff;
-    border: 2px solid #e20000;
-    color: #e20000;
+    background-color: var(--baseWhiteColor);
+    border: 2px solid var(--deleteColor);
+    color: var(--deleteColor);
     border-radius: 3px;
     padding: 3px 5px;
 }
@@ -53,6 +53,6 @@ defineEmits(['toggle-task', 'delete-task'])
 }
 
 .task-delete-button:active {
-    background-color: #cecece;
+    background-color: var(--backgroundButtonsActive);
 }
 </style>

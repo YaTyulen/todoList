@@ -50,32 +50,32 @@ const deleteTask = (id) => {
 
 <style scoped>
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
 }
 
 .list-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 3px;
-    width: 80%;
-    height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--baseWhiteColor);
+  border-radius: 3px;
+  width: 80%;
+  height: 80%;
 }
 
 h1 {
-    border-bottom: 1px solid #5e5e5e;
+  border-bottom: 1px solid var(--fontBaseColor);
 }
 
 .input-add-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
 }
 </style>

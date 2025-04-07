@@ -25,23 +25,23 @@ const handlerAddTask = () => {
     height: 30px;
     padding: 5px;
     border-radius: 3px;
-    border: 2px solid #919191
+    border: 2px solid var(--fontBaseColor)
 }
 
 .button-add {
-    background-color: #ffffff;
-    border: 2px solid #00ff99;
+    background-color: var(--baseWhiteColor);
+    border: 2px solid var(--addColor);
     border-radius: 3px;
-    color: #00ff99;
+    color: var(--addColor);
 }
 
 .button-add:hover {
-    border-color: #03b16b;
-    color: #03b16b;
+    border-color: var(--addHoverColor);
+    color: var(--addHoverColor);
     cursor: pointer;
 }
 
 .button-add:active {
-    background-color: #e4e4e4;
+    background-color: var(--backgroundButtonsActive);
 }
 </style>
